@@ -19,7 +19,7 @@ function* generatePowerset(arr) {
   const counters = arr.map(() => new ModCounter(2));
 
   // Chain all counters together
-  const chained = new ChainedCounter(counters);
+  const chained = new ChainedCounter(...counters);
 
   // Pre-allocate draft array for bits (reused across all iterations)
   const bits = new Array(arr.length);
@@ -27,22 +27,18 @@ function* generatePowerset(arr) {
   // Yield each combination as it's generated
   for (const combinationIterator of chained.iterateUntilReset()) {
     // Populate bits array from iterator
-    let bitIndex = 0;
-    for (const bit of combinationIterator) {
-      bits[bitIndex++] = bit;
-    }
+    combinationIterator.forEach((bit, i) => {bits[i] = bit;});
 
     // First iteration: Calculate subset size (sum the bits: 0s and 1s)
     const subsetSize = bits.reduce((count, bit) => count + bit, 0);
 
     // Second iteration: Populate subset with known size
     const subset = new Array(subsetSize);
-    let subsetIndex = 0;
-    for (let i = 0; i < bits.length; i++) {
-      if (bits[i] === 1) {
-        subset[subsetIndex++] = arr[i];
-      }
-    }
+    bits.map((bit, bitIndex) => ({bit, bitIndex}))
+      .filter(p => p.bit === 1)
+      .forEach((p, iterationIndex) => {
+        subset[iterationIndex] = arr[p.bitIndex];
+      });
 
     yield subset;
   }
