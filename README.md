@@ -1,5 +1,9 @@
 # mod-counter
 
+[![npm version](https://img.shields.io/npm/v/mod-counter.svg)](https://www.npmjs.com/package/mod-counter)
+[![CI](https://github.com/kleinron/mod-counter/workflows/CI/badge.svg)](https://github.com/kleinron/mod-counter/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A JavaScript data structure library for modular (cyclic) counters with event-driven architecture. Perfect for creating clocks, generating combinations, and managing cyclical sequences.
 
 ## Features
