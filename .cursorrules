@@ -1,0 +1,13 @@
+# Project Context
+This is a data structure library for javascript
+
+# Specification Files
+- Feature specifications are in /specs/
+- Always reference the relevant spec file before implementing features
+- Update specs when requirements change
+
+# Code Style
+- Follow OOP patterns where possible
+
+# Common Commands
+- npm test - Run tests

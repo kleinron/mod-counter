@@ -1,0 +1,33 @@
+{
+  "name": "mod-counter",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/kleinron/mod-counter#readme",
+  "bugs": {
+    "url": "https://github.com/kleinron/mod-counter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kleinron/mod-counter.git"
+  },
+  "license": "MIT",
+  "author": "Ron Klein",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "eslint": "^9.37.0"
+  },
+  "files": [
+    "src"
+  ]
+}
