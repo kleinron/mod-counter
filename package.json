@@ -1,7 +1,8 @@
 {
   "name": "mod-counter",
   "version": "0.1.0",
-  "description": "",
+  "description": "A JavaScript data structure library for modular (cyclic) counters with event-driven design",
+  "keywords": ["mod", "modulo", "arithmetic", "cyclic", "data-structures"],
   "homepage": "https://github.com/kleinron/mod-counter#readme",
   "bugs": {
     "url": "https://github.com/kleinron/mod-counter/issues"
@@ -28,6 +29,7 @@
     "eslint": "^9.37.0"
   },
   "files": [
-    "src"
+    "src",
+    "README.md"
   ]
 }
